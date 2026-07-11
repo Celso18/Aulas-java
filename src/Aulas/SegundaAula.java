@@ -3,26 +3,34 @@ package Aulas;
 import java.util.Scanner;
 
 public class SegundaAula {
-    public static void main(String[] argus) {
-        Scanner scanner = new (System.in);
-        int  value = scanner.nextInt();
+    public static void main(String[] args) {
 
+        Scanner entrada = new Scanner(System.in);
 
-        if (value < 10);
+        int valor = entrada.nextInt();
+
+        if (valor < 10){
         System.out.println("Menor do que 10");
 
-      } else if (value == 10) {
-          System.out.println("Maior do que 10");
+    } else if (valor > 10){
+        System.out.println("Maior do que 10");
 
-        switch (value){
+    } else{
+        System.out.println("O número é igual a 10");
+    }
+            switch (valor){
             case 1:
                 System.out.println("Escolheu 1");
                 break;
-            default;
-                System.out.println("não escolheu uma das opções")
+            case 2:
+                System.out.println("Escolheu 2");
+                break;
+
+            default:
+                System.out.println("não escolheu uma das opções");
                  break;
         }
-
+        entrada.close();
     }
 }
 
