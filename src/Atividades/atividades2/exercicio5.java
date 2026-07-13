@@ -1,28 +1,37 @@
 package Atividades.atividades2;
 
+import java.util.Scanner;
+
 public class exercicio5 {
 
     public static void main(String[] args) {
 
-        double valorCompra = 350.00;
-        double desconto;
+        Scanner entrada = new Scanner(System.in);
 
-        // Cálculo do desconto
+
+        System.out.print("Digite o valor da compra: ");
+        double valorCompra = entrada.nextDouble();
+
+        double desconto = 0;
+
+
         if (valorCompra < 100.00) {
             desconto = 0;
-        }
-        else if (valorCompra < 300.00) {
+
+        } else if (valorCompra >= 100.00 && valorCompra <= 299.99) {
             desconto = valorCompra * 0.10;
-        }
-        else {
+        } else {
             desconto = valorCompra * 0.20;
         }
 
-        double valorFinal = valorCompra - desconto;
 
-        // Saída formatada
-        System.out.printf("Valor da compra: R$ %.2f%n", valorCompra);
-        System.out.printf("Desconto: R$ %.2f%n", desconto);
-        System.out.printf("Valor final: R$ %.2f%n", valorFinal);
+        double totalPagar = valorCompra - desconto;
+
+
+        System.out.println("Valor original: R$ " + valorCompra);
+        System.out.println("Valor poupado: R$ " + desconto);
+        System.out.println("Total a pagar: R$ " + totalPagar);
+
+        entrada.close();
     }
 }
