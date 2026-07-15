@@ -20,7 +20,7 @@ public class SistemaDeCofreDigital {
             if (codigoDigitado == codigoCorreto) {
                 System.out.println("Cofre Aberto!");
                 scanner.close();
-                return; // Sai do método
+                return;
             }
             else {
                 tentativas--;
