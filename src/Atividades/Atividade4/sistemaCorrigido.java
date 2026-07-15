@@ -16,6 +16,6 @@ public static void main(String[] args) {
 }
 
 public static void exibirMensagem(String texto) {
-    System.out.println(texto);    // Método corrigido
+    System.out.println(texto);    // Método corrigido por estar faltando a palavra static e foi feito o balanceamento das chaves.
 }
 }
