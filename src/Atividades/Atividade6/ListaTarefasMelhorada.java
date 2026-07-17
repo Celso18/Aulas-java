@@ -8,13 +8,13 @@ public class ListaTarefasMelhorada {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<String> tarefas = new ArrayList<>();
-        ArrayList<String> tarefasConcluidas = new ArrayList<>(); // Para registrar tarefas concluidas
+        ArrayList<String> tarefasConcluidas = new ArrayList<>();
 
         int opcao;
         do {
             exibirMenu();
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Consumir nova linha
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -37,7 +37,7 @@ public class ListaTarefasMelhorada {
                     removerPorLIFO(tarefas, tarefasConcluidas);
                     break;
                 case 7:
-                    removerPorFEFO(tarefas, tarefasConcluidas); // Assumindo similar a FIFO se nao houver expiracao
+                    removerPorFEFO(tarefas, tarefasConcluidas);
                     break;
                 case 8:
                     listarTarefasConcluidas(tarefasConcluidas);
@@ -117,7 +117,7 @@ public class ListaTarefasMelhorada {
             System.out.println("Nenhuma tarefa para remover.");
             return;
         }
-        String removida = tarefas.remove(0); // Remove o primeiro (FIFO)
+        String removida = tarefas.remove(0);
         concluidas.add(removida);
         System.out.println("Tarefa removida por FIFO: " + removida);
     }
@@ -127,19 +127,18 @@ public class ListaTarefasMelhorada {
             System.out.println("Nenhuma tarefa para remover.");
             return;
         }
-        String removida = tarefas.remove(tarefas.size() - 1); // Remove o ultimo (LIFO)
+        String removida = tarefas.remove(tarefas.size() - 1);
         concluidas.add(removida);
         System.out.println("Tarefa removida por LIFO: " + removida);
     }
 
     private static void removerPorFEFO(ArrayList<String> tarefas, ArrayList<String> concluidas) {
-        // Como nao ha datas de expiracao, implementando similar ao FIFO
-        // Em um cenario real, ordenaria por data de expiracao
+
         if (tarefas.isEmpty()) {
             System.out.println("Nenhuma tarefa para remover.");
             return;
         }
-        String removida = tarefas.remove(0); // Placeholder para FEFO
+        String removida = tarefas.remove(0);
         concluidas.add(removida);
         System.out.println("Tarefa removida por FEFO: " + removida + " (implementacao similar a FIFO)");
     }
