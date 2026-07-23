@@ -7,7 +7,7 @@ public class Main {
         Moto moto = new MotoACombustao();
 
 
-        carro.nomeVeículo = "Celtinha";
+        carro.setNomeVeículo = "Celtinha";
         carro.ligar();
         carro.ligarArCondicionado();
 

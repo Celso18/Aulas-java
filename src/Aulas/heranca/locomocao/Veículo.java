@@ -5,15 +5,18 @@ package Aulas.heranca.locomocao;
 import java.sql.SQLOutput;
 
 public class Veículo {
-    String marca;
-    String placa;
-    int anoFabricacao;
-    String nomeVeiculo;
-    public void ligar (){
-        System.out.println(" O seu veiculo" +nomeVeiculo+" está sendo ligando...");
+    private String marca;
+    private String placa;
+    private int anoFabricacao;
+    protected String nomeVeiculo;
+
+    public void ligar () {
+        System.out.println(" O seu veiculo" + nomeVeiculo + " está sendo ligando...");
+
+    }
 
 
 
 
     }
-}
+
